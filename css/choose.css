@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url('../images/desktop/2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+/* ❤️ Heart button */
+.heart-container {
+    position: absolute;
+    top: -40px;
+    left: -190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heart {
+    width: 180px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.heart:hover {
+    transform: scale(1.15);
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-right: -200px;
+    font-family: 'Magnolia Script', cursive;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid black;
+    display: inline-block;
+    /* 👈 this is crucial for width animation */
+    width: 0;
+    /* start hidden */
+   animation: typing 5s steps(30, end) forwards, blink 0.6s step-end infinite alternate;
+
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blink effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* 🎁 Gifts Grid */
+.gift-grid {
+    display: grid;
+    padding-left: 180px;
+    grid-template-columns: repeat(3, 170px);
+    grid-gap: 70px;
+    justify-content: center;
+}
+
+/* 🌸 Gift Box Style */
+.gift {
+    background-color: white;
+    border: 5px solid #d44762;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s forwards;
+}
+
+.gift img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.gift:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:
+        0 0 5px white,
+        0 0 15px rgba(244, 66, 123, 1),
+        0 0 30px rgba(244, 66, 123, 0.9),
+        0 0 50px rgba(244, 66, 123, 0.8),
+        0 0 80px rgba(244, 66, 123, 0.7);
+
+}
+.gift:nth-child(1) { animation-delay: 5s; }
+.gift:nth-child(2) { animation-delay: 6s; }
+.gift:nth-child(3) { animation-delay: 7s; }
+.gift:nth-child(4) { animation-delay: 8s; }
+.gift:nth-child(5) { animation-delay: 9s; }
+.gift:nth-child(6) { animation-delay: 10s;}
+
+/* ✨ Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating animation for gentle movement */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.fade {
+    animation: fadeInUp 1s ease forwards, float 3s ease-in-out infinite;
+}
+.ribbon {
+  position: absolute;
+  top: -5px;   /* adjust position vertically */
+  left: -90px;  /* adjust position horizontally */
+  width: 70px;  /* ribbon size */
+  height: auto;
+  pointer-events: none;
+  transform: rotate(-30deg); /* 🎀 rotate counterclockwise */
+  transform-origin: top left;
+
+}

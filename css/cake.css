@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url('../images/desktop/7.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 112%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Magnolia Script', cursive;
+  overflow: hidden;
+}
+.heart-container {
+  position: absolute;
+  bottom: -20px;
+  left: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.heart {
+  width: 160px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.heart:hover {
+  transform: scale(1.15);
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+.cake-container {
+  position: absolute;
+  bottom: 130px;
+  right: 130px;
+  
+}
+.cake{
+  width: 370px;
+  height: auto;
+}

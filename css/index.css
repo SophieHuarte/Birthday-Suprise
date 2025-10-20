@@ -1,0 +1,122 @@
+/* Reset default margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set full-screen background image */
+body {
+  height: 100vh;
+  background-image: url('../images/desktop/1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Center text and button */
+.container {
+  text-align: center;
+  color: black;
+  border-radius: 12px;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+/* Typewriter animation */
+.container h1 {
+  font-size: 55px;
+  margin-bottom: 30px;
+  font-family: "Alice", serif;
+  font-weight: 800;
+  font-style: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 3s steps(25, end) forwards, blink 0.6s step-end infinite alternate;
+}
+
+/* Keyframes for typing */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* Cursor blink effect */
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/* Button style */
+.container button {
+  background-color: #c63455;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 32px;
+  font-family: "Alice", serif;
+  font-weight: 600;
+  font-style: normal;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid black;
+}
+
+.container button:hover {
+  background-color: white;
+  color: #c63455;
+  border: 2px solid #c63455;
+  transform: scale(1.05);
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  body {
+    background-image: url('../images/phone/1.png');
+    /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .container h1 {
+    font-size: 32px;
+    white-space: normal; /* Allow wrapping on small screens */
+    border: none; /* Remove blinking cursor for mobile readability */
+    animation: none;
+    width: 100%; /* Ensure full width */
+    margin-top: 50px;
+    padding-top: 30px;
+   
+  }
+
+  .container button {
+    font-size: 22px;
+    padding: 10px 18px;
+    border-radius: 25px;
+  }
+
+}
+

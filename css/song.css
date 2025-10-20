@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url('../images/desktop/6.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 115%;
+    align-items: center;
+    font-family: 'Magnolia Script', cursive;
+    overflow: hidden;
+}
+.heading {
+    position: absolute;
+    top: 20px;
+    left: 400px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Magnolia Script', cursive;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid black;
+    display: inline-block;
+    width: 0;
+    animation: typing 2s steps(30, end) forwards, blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 350px;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+/* Heart image (top right corner) */
+.heart-container {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.heart {
+    width: 180px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.heart:hover {
+    transform: scale(1.15);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+.play{
+    position: relative;
+    top: 470px;
+    left: 480px;
+}
+.play img{
+    width: 230px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.play-btn:hover {
+    transform: scale(1.15);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}

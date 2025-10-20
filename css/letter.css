@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url('../images/desktop/5.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Magnolia Script', cursive;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.story {
+  position: absolute;
+  top: 120px;
+  left: 190px;
+
+}
+.story img {
+  width: 450px;
+  height: auto;
+}
+  
+
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 520px;
+  margin-left: 230px;
+  font-family: 'Magnolia Script', cursive;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  display: inline-block;
+  width: 0;
+  animation: typing 2s steps(30, end) forwards, blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 320px;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Heart image (top right corner) */
+.heart-container {
+  position: absolute;
+  bottom: 10px;
+  right: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.heart {
+  width: 190px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.heart:hover {
+  transform: scale(1.15);
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
